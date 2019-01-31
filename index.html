@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>How Long Until Pumpkin's Birthday</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      today = new Date();
+      var xmas = new Date(today.getFullYear(), 6, 7);
+      if (today.getMonth() == 6 && today.getDate() > 7) {
+        xmas.setFullYear(xmas.getFullYear() + 1);
+      }
+      const one_day = 1000 * 60 * 60 * 24;
+      document.write(
+        Math.ceil((xmas.getTime() - today.getTime()) / one_day) +
+          " days left until Pumpkin's Birthday!"
+      );
+    </script>
+  </body>
+</html>
